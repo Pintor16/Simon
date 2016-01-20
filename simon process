@@ -1,0 +1,77 @@
+int quadrats[]={2,3,4,5,6};
+int quadrat_count=5;
+ VUmeter=vuMeter;
+
+int [] [] S= {  {0,1,2},
+                {0,1,2},
+                {0,1,2}};
+int i;
+int j;
+
+int torn_inici=2;
+int torn_max=15;
+
+int game[];
+int torns=2;
+int temps=500;
+                
+void setup(){
+ size(800,800); 
+ vuMeterconfig(quadrat_count, quadrats);
+ vuMeter.begn;
+ pot.setLevels(5);
+ randomSeed(analogRead(A5));
+}
+  
+  void draw(){
+    println(S[i][j]);
+for (int i = 200; i < 601; i = i+200) {
+  for (int j = 200; j < 601; j = j+200) {
+
+    fill(255);   
+    noStroke();
+    ellipse(i, j,100,100);  
+    
+    newGame();
+    simonSays();
+    delay(1000);
+    getInputs();
+}}}
+ 
+void newGame() {
+  for (int a=0;a<torns;a++){
+    game[a]=random(S);
+  }
+}
+
+void simonSays() {
+  for (int a=0;a<torns;a++){
+    vuMeter.on(game[a]);
+    delay(temps);
+    vuMeter.off(game[a]);
+    delay(temps);
+  }
+}
+void getInputs() {
+  for (int a=0;a<torns;a++){
+    int input;
+    while (!button.released(10)){
+      vuMeter.clear();
+      vuMeter.on(potgetLevel());
+    }
+    input=pot.getLevel();
+    if(input=game[a]){
+    }
+    else{
+      gameOver();
+      return;}}
+      delay(500);
+      levelUp();}
+      
+void gameOver(){
+    torns=torn_inici;}
+ 
+void levelUp(){
+    if(torns<torn_max){
+    torns++;
+        }}
