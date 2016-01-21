@@ -1,0 +1,40 @@
+//ellipses
+int x=200;
+int y=400;
+int a=400;
+int b=400;
+int c=600;
+int d=400;
+
+
+int w=0;
+void setup(){
+ size(800,800); 
+ 
+}
+  
+  void draw(){   
+    fill(255);   
+    noStroke();
+    ellipse(x, y,100,100);  
+    ellipse(a, b,100,100);  
+    ellipse(c, d,100,100);  
+
+if(w==1){
+if( mouseX>150 && mouseX<250){
+  fill(255,0,0);
+  ellipse(x, y,100,100); 
+}}
+if(w==2){
+if( mouseX>350 && mouseX<450){
+  fill(0,0,255);
+  ellipse(a, b,100,100); 
+}}
+if(w==3){
+if( mouseX>550 && mouseX<650){
+  fill(0,255,0);
+  ellipse(c, d,100,100); 
+}}
+
+}
+  
