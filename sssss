@@ -19,6 +19,9 @@ void setup(){
     ellipse(x, y,100,100);  
     ellipse(a, b,100,100);  
     ellipse(c, d,100,100);  
+    for (w=0; w<3;w++){
+    float r=random(1,3);
+  println(r);}
 
 if(w==1){
 if( mouseX>150 && mouseX<250){
@@ -37,4 +40,3 @@ if( mouseX>550 && mouseX<650){
 }}
 
 }
-  
